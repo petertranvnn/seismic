@@ -29,6 +29,9 @@ rustc --version
 echo "Installing sfoundryup..."
 curl -L -H "Accept: application/vnd.github.v3.raw" \
      "https://api.github.com/repos/SeismicSystems/seismic-foundry/contents/sfoundryup/install?ref=seismic" | bash
+# Cập nhật PATH và source .bashrc để sử dụng sfoundryup ngay lập tức
+export PATH="$HOME/.seismic/bin:$PATH"
+source "$HOME/.bashrc"
 sfoundryup
 
 if [ ! -d "try-devnet" ]; then
