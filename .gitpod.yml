@@ -1,0 +1,6 @@
+# .gitpod.yml
+tasks:
+  - init: |
+      chmod +x deploy.sh  # Đảm bảo file có quyền thực thi
+      ./deploy.sh         # Chạy script tự động khi workspace khởi động
+    command: echo "Gitpod workspace is ready!"
